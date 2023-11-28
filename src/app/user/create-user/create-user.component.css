@@ -1,0 +1,86 @@
+#signup {
+  background: url('movie-theme-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.card {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-title {
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.btn-primary:hover {
+  color: white;
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blur-background {
+  filter: blur(5px);
+}
+
+.input-group-prepend span {
+  width: 34px;
+  height: 34px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.radio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.radioName {
+  color: #495057;
+}
+
+.login_btn {
+  color: white;
+  background-color: #f0456ae5;
+  border-color: #5f6bdd;
+  width: 100px;
+}
+
+.login_btn:hover {
+  background-color: #4b58d6;
+  border-color: #4b58d6;
+}

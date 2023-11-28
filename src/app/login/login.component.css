@@ -1,0 +1,89 @@
+#login {
+  background: url('movie-theme-background.jpg');
+  position: relative;
+  top: -10px;
+  overflow: hidden;
+}
+
+.container {
+  min-height: 90vh;
+  align-content: center;
+}
+
+.card {
+  height: 450px;
+  margin-top: 5rem;
+  margin-bottom: auto;
+  width: 350px;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  transition: transform .2s; /* Animation */
+}
+
+.card:hover {
+  transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+#blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  animation: fadeOut 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.form-animation {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.black
+{
+  color: black;
+}
+.login_btn {
+  color: white;
+  background-color: #f0456ae5;
+  width: 100px;
+  margin-top: 3rem;
+  transition-duration: 0.4s;
+}
+
+.signup_btn {
+  color: white;
+  background-color: #f0456ae5;
+  width: 200px;
+  transition-duration: 0.4s;
+}
+.signup_btn:hover {
+  background-color: #008CBA; /* Green */
+  color: white;
+}
+.login_btn:hover {
+  background-color: #008CBA; /* Green */
+  color: white;
+}

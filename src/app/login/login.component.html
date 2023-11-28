@@ -1,0 +1,52 @@
+<div id="blur" *ngIf="isLoading"></div>
+
+<section id="login">
+  <div class="container">
+    <div *ngIf="isLoading" class="loading-container">
+      <img src="https://i.gifer.com/origin/41/4109c3f1d362403a87c5ebfd4bb382ee_w200.gif" id="loading">
+    </div>
+    <div *ngIf="!isLoading">
+      <h3 style="color: rgba(39, 15, 215, 0)">{{ errorMessage }}</h3>
+      <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
+        <div class="d-flex justify-content-center h-100">
+          <div class="card">
+            <div class="card-header">
+              <h3>Sign In</h3>
+              <div class="d-flex justify-content-end social_icon"></div>
+            </div>
+            <div class="card-body">
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" formControlName="username" placeholder="Username" required />
+                <div class="text-danger" *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched">
+                  Username is required.
+                </div>
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-key"></i></span>
+                </div>
+                <input type="password" class="form-control" formControlName="password" placeholder="Password" required />
+                <div class="text-danger" *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+                  Password is required.
+                </div>
+              </div>
+             
+              <div class="d-flex justify-content-center links">
+                <button type="submit" value="Login" class="btn float-right login_btn">Login</button>
+              </div>
+            </div>
+            <hr />
+            <div class="card-footer">
+              <div class="d-flex justify-content-center links">
+                <a class="btn signup_btn" [routerLink]="['/signUp']"> CLICK HERE To Sign Up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
